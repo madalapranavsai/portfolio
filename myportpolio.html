@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranav Sai Madala | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #cccccc;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .socials {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .socials a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #1e90ff;
+    }
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #1e90ff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .resume-button:hover {
+      background: #0066cc;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #1e90ff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #1e90ff;
+      display: inline-block;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    .about p,
+    .skills p,
+    .contact p {
+      color: #cccccc;
+      line-height: 1.6;
+    }
+
+    .skills .skill {
+      margin-bottom: 20px;
+    }
+
+    .skills .label {
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    .skills .bar {
+      width: 100%;
+      height: 10px;
+      background: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skills .fill {
+      height: 100%;
+      background: #1e90ff;
+      width: 0;
+      animation: fillBar 2s forwards;
+    }
+
+    @keyframes fillBar {
+      to { width: var(--width); }
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .card-footer span {
+      font-size: 1.1rem;
+    }
+
+    .card-footer .icons a {
+      margin-left: 15px;
+      color: white;
+      font-size: 1.2rem;
+      transition: color 0.2s ease;
+    }
+
+    .card-footer .icons a:hover {
+      color: #1e90ff;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact input,
+    .contact textarea {
+      background: #1a1a1a;
+      color: white;
+      border: 1px solid #333;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #0066cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pranav Sai Madala</h1>
+    <p>ECE Student | AI & ML Enthusiast | Embedded Systems Learner</p>
+    <div class="socials">
+      <a href="https://github.com/madalapranavsai" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="www.linkedin.com/in/pranav-sai-madala-0b233127b" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <a class="resume-button" href="PranavSaiMadala_Resume.pdf" target="_blank">Download Resume</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>I am a pre-final year Electronics and Communication Engineering student at MANIT Bhopal, passionate about Artificial Intelligence, Machine Learning, and problem solving using Data Structures and Algorithms. I enjoy building smart systems and learning through real-world projects.</p>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skill">
+        <div class="label">Python</div>
+        <div class="bar"><div class="fill" style="--width: 90%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">C++ / DSA</div>
+        <div class="bar"><div class="fill" style="--width: 85%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">Machine Learning</div>
+        <div class="bar"><div class="fill" style="--width: 80%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="label">Embedded Systems</div>
+        <div class="bar"><div class="fill" style="--width: 70%;"></div></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="card">
+          <img src="WhatsApp Image 2025-06-25 at 6.47.09 PM.jpeg" alt="Speaker Recognition Screenshot" />
+          <div class="card-footer">
+            <span>Speaker Recognition</span>
+            <div class="icons">
+              <a href="https://github.com/madalapranavsai/proj-1" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://your-live-link.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more cards here -->
+        <div class="project-grid">
+            <div class="card">
+              <img src="C:\Users\gowth\OneDrive\Desktop\New folder\Screenshot 2025-06-25 183748.png" alt="Personal Portfolio Website" />
+              <div class="card-footer">
+                <span>Personal Portfolio Website</span>
+                <div class="icons">
+                  <a href="https://github.com/madalapranavsai/portfolio" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://your-live-link.com" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Pranav Sai Madala. All rights reserved.
+  </footer>
+
+</body>
+</html>
