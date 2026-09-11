@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madala Pranav Sai | Software Engineer & AI Agents Specialist</title>
-  <meta name="description" content="Portfolio of Madala Pranav Sai — Software Engineer Intern at AxiomIO, Google ADK & LangChain AI Agent Specialist, B.Tech ECE at MANIT Bhopal.">
-  <meta property="og:title" content="Madala Pranav Sai | Portfolio">
-  <meta property="og:description" content="Software Engineer specializing in AI Agents (Google ADK, LangChain), FastAPI, Cloud Run, Docker, and Security Systems.">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/201633219?v=4">
-  <meta property="og:url" content="https://github.com/madalapranavsai">
 
-  <!-- Google Fonts -->
+  <!-- ── SEO ── -->
+  <title>Madala Pranav Sai | AI Agents & Software Engineer</title>
+  <meta name="description" content="Portfolio of Madala Pranav Sai — Software Engineer Intern at AxiomIO, Google ADK & LangChain AI Agent Specialist, B.Tech ECE at MANIT Bhopal.">
+  <meta name="author" content="Madala Pranav Sai">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://madalapranavsai.github.io/portfolio/">
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title"       content="Madala Pranav Sai | AI Agents & Software Engineer">
+  <meta property="og:description" content="Software Engineer specialising in AI Agents (Google ADK, LangChain), FastAPI backends, Docker microservices, and distributed agent architectures.">
+  <meta property="og:image"       content="https://avatars.githubusercontent.com/u/201633219?v=4">
+  <meta property="og:url"         content="https://madalapranavsai.github.io/portfolio/">
+  <meta property="og:type"        content="website">
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Madala Pranav Sai | AI Agents & Software Engineer">
+  <meta name="twitter:description" content="Autonomous AI agent builder · FastAPI · Docker · MANIT Bhopal '27">
+  <meta name="twitter:image"       content="https://avatars.githubusercontent.com/u/201633219?v=4">
+
+  <!-- ── Avoid flash of wrong theme before JS runs ── -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('theme')||
+            (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.dataset.theme=t;
+    })();
+  </script>
+
+  <!-- ── Fonts ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,116 +42,137 @@
 </head>
 <body>
 
-  <!-- Ambient Background Orbs -->
-  <div class="ambient-glow orb-1"></div>
-  <div class="ambient-glow orb-2"></div>
+  <!-- Ambient background orbs -->
+  <div class="ambient-glow orb-1" aria-hidden="true"></div>
+  <div class="ambient-glow orb-2" aria-hidden="true"></div>
 
-  <!-- Navigation Bar -->
-  <header class="navbar" id="navbar">
+  <!-- ══════════════════════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
     <div class="nav-container">
-      <a href="#hero" class="nav-brand">
+
+      <a href="#hero" class="nav-brand" aria-label="Home">
         <span class="brand-bracket">&lt;</span>Pranav<span class="brand-dot">.</span>Sai<span class="brand-bracket">/&gt;</span>
       </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#skills" class="nav-link">Skills</a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+        <a href="#about"        class="nav-link">About</a>
+        <a href="#experience"   class="nav-link">Experience</a>
+        <a href="#projects"     class="nav-link">Projects</a>
+        <a href="#skills"       class="nav-link">Skills</a>
         <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#terminal" class="nav-link">Terminal</a>
-        <a href="#contact" class="nav-link nav-cta">Get in Touch</a>
+        <a href="#terminal"     class="nav-link">Terminal</a>
+        <a href="#contact"      class="nav-link nav-cta">Get in Touch</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
+      <div class="nav-right">
+        <!-- Dark / light toggle -->
+        <button id="theme-toggle" aria-label="Switch to light mode" title="Toggle theme">🌙</button>
+
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburger"
+                aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
+  <!-- ══════════════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="hero-section" id="hero" aria-labelledby="hero-title">
     <div class="container hero-container">
-      <div class="hero-content">
-        <div class="status-pill">
-          <span class="status-dot"></span>
+
+      <div class="hero-content" data-reveal>
+        <div class="status-pill" aria-label="Current status">
+          <span class="status-dot" aria-hidden="true"></span>
           <span>Former Software Engineer Intern @ AxiomIO</span>
         </div>
-        <h1 class="hero-title">
+
+        <h1 class="hero-title" id="hero-title">
           Hi, I'm <span class="gradient-text">Madala Pranav Sai</span>
         </h1>
-        <h2 class="hero-subtitle">
-          AI Agents & Software Engineer Specialist
-        </h2>
+        <h2 class="hero-subtitle">AI Agents &amp; Software Engineer Specialist</h2>
         <p class="hero-description">
-          Engineered multi-agent SecOps platforms on Google ADK, Gemini API, and LangChain DeepAgents. Crafting high-throughput FastAPI backends, Docker microservices, and distributed AI agent architectures.
+          Engineered multi-agent SecOps platforms on Google ADK, Gemini API, and
+          LangChain DeepAgents. Crafting high-throughput FastAPI backends,
+          Docker microservices, and distributed AI agent architectures.
         </p>
 
         <div class="hero-actions">
           <a href="#experience" class="btn btn-primary">
             <span>View Work &amp; Experience</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="#terminal" class="btn btn-secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
             <span>Interactive CLI</span>
           </a>
-          <a href="https://github.com/madalapranavsai" target="_blank" rel="noopener" class="btn btn-icon" title="GitHub">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/madalapranavsai" target="_blank" rel="noopener noreferrer" class="btn btn-icon" aria-label="GitHub profile">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
-          <a href="https://linkedin.com/in/pranav-sai-madala" target="_blank" rel="noopener" class="btn btn-icon" title="LinkedIn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://linkedin.com/in/pranav-sai-madala" target="_blank" rel="noopener noreferrer" class="btn btn-icon" aria-label="LinkedIn profile">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
-          <a href="https://codeforces.com/profile/madalapranavsai" target="_blank" rel="noopener" class="btn btn-icon" title="Codeforces">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3A1.5 1.5 0 0 1 0 19.5V9A1.5 1.5 0 0 1 1.5 7.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 19.5v-15A1.5 1.5 0 0 1 10.5 3h3zm9 7.5a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5v-6a1.5 1.5 0 0 1 1.5-1.5h3z"/></svg>
+          <a href="https://codeforces.com/profile/madalapranavsai" target="_blank" rel="noopener noreferrer" class="btn btn-icon" aria-label="Codeforces profile">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3A1.5 1.5 0 0 1 0 19.5V9A1.5 1.5 0 0 1 1.5 7.5h3zm9-4.5A1.5 1.5 0 0 1 15 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 19.5v-15A1.5 1.5 0 0 1 10.5 3h3zm9 7.5a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5h-3a1.5 1.5 0 0 1-1.5-1.5v-6a1.5 1.5 0 0 1 1.5-1.5h3z"/></svg>
           </a>
         </div>
       </div>
 
-      <div class="hero-visual">
+      <div class="hero-visual" data-reveal>
         <div class="avatar-card glass-card">
           <div class="avatar-wrapper">
-            <img src="https://avatars.githubusercontent.com/u/201633219?v=4" alt="Madala Pranav Sai" class="avatar-img">
-            <div class="avatar-ring"></div>
+            <img src="https://avatars.githubusercontent.com/u/201633219?v=4"
+                 alt="Madala Pranav Sai — profile photo"
+                 class="avatar-img" width="160" height="160" loading="eager">
+            <div class="avatar-ring" aria-hidden="true"></div>
           </div>
           <div class="avatar-badge">
-            <span class="badge-icon">🎓</span>
+            <span aria-hidden="true">🎓</span>
             <span>MANIT Bhopal '27 (ECE)</span>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- About & Education Section -->
-  <section class="section" id="about">
+  <!-- ══════════════════════════════════════════════════════════════
+       ABOUT / EDUCATION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="about" aria-labelledby="about-title">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">01. Background & Education</span>
-        <h2 class="section-title">About Me</h2>
+      <div class="section-header" data-reveal>
+        <span class="section-tag">01. Background &amp; Education</span>
+        <h2 class="section-title" id="about-title">About Me</h2>
       </div>
 
       <div class="about-grid">
-        <div class="about-card glass-card">
-          <div class="card-icon">🎓</div>
+        <div class="about-card glass-card" data-reveal>
+          <div class="card-icon" aria-hidden="true">🎓</div>
           <h3>MANIT Bhopal</h3>
-          <p class="card-subtitle">B.Tech in Electronics &amp; Communication Engineering (2023 – 2027)</p>
+          <p class="card-subtitle">B.Tech in Electronics &amp; Communication Engineering (2023–2027)</p>
           <p class="card-meta">CGPA: <strong>7.52 / 10</strong></p>
           <p>Maulana Azad National Institute of Technology, Bhopal. Core coursework in Data Structures, Algorithms, OOP, and Computer Systems.</p>
         </div>
 
-        <div class="about-card glass-card">
-          <div class="card-icon">🏫</div>
+        <div class="about-card glass-card" data-reveal>
+          <div class="card-icon" aria-hidden="true">🏫</div>
           <h3>Narayana Junior College</h3>
-          <p class="card-subtitle">Intermediate - BIEAP (Class 12th) (2023)</p>
+          <p class="card-subtitle">Intermediate — BIEAP Class XII (2023)</p>
           <p class="card-meta">Percentage: <strong>90.6%</strong></p>
           <p>Strong foundation in Higher Mathematics, Physics, and Analytical Problem Solving.</p>
         </div>
 
-        <div class="about-card glass-card">
-          <div class="card-icon">📚</div>
+        <div class="about-card glass-card" data-reveal>
+          <div class="card-icon" aria-hidden="true">📚</div>
           <h3>Kennedy EM High School</h3>
-          <p class="card-subtitle">Matriculation - BSEAP (Class 10th) (2021)</p>
+          <p class="card-subtitle">Matriculation — BSEAP Class X (2021)</p>
           <p class="card-meta">Percentage: <strong>99.8%</strong></p>
           <p>Academic excellence with top state rank distinctions.</p>
         </div>
@@ -136,30 +180,37 @@
     </div>
   </section>
 
-  <!-- Work Experience Section -->
-  <section class="section" id="experience">
+  <!-- ══════════════════════════════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="experience" aria-labelledby="experience-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <span class="section-tag">02. Industry Experience</span>
-        <h2 class="section-title">Work Experience</h2>
+        <h2 class="section-title" id="experience-title">Work Experience</h2>
       </div>
 
       <div class="timeline">
-        <div class="timeline-item glass-card">
+        <article class="timeline-item glass-card" data-reveal>
           <div class="timeline-header">
             <div>
               <h3 class="role-title">Software Engineer Intern</h3>
-              <p class="company-name">AxiomIO IT Global Pvt. Ltd. <span class="badge-on-site">On-site</span></p>
+              <p class="company-name">
+                AxiomIO IT Global Pvt. Ltd.
+                <span class="badge-on-site">On-site</span>
+              </p>
             </div>
-            <span class="timeline-date">May 2026 – July 2026</span>
+            <time class="timeline-date" datetime="2026-05/2026-07">May 2026 – July 2026</time>
           </div>
-          <ul class="timeline-bullets">
-            <li>Engineered the <strong>A2UI-based frontend</strong> for the xOps platform, enabling the backend LLM agent to generate interactive charts as structured, declarative UI schemas in response to natural language queries, accelerating data retrieval operations by <strong>40%</strong>.</li>
-            <li>Architected an autonomous <strong>SecOps agent</strong> using a manager-worker architecture with <strong>DeepAgents</strong>, dynamically spawning specialized sub-agents for concurrent security scanning, reducing manual triage time by <strong>~60%</strong>.</li>
-            <li>Explored <strong>LangGraph</strong> for stateful AI workflow design and the <strong>A2A protocol</strong> for structured agent-to-agent communication, supporting the platform’s distributed multi-agent architecture.</li>
-            <li>Spearheaded the platform’s <strong>Docker implementation</strong> to containerize the multi-agent architecture, ensuring isolated and scalable environments capable of supporting <strong>50+ concurrent agent executions</strong>.</li>
+
+          <ul class="timeline-bullets" aria-label="Key contributions">
+            <li>Engineered the <strong>A2UI-based frontend</strong> for the xOps platform, enabling the backend LLM agent to generate interactive charts as structured declarative UI schemas, accelerating data retrieval by <strong>40%</strong>.</li>
+            <li>Architected an autonomous <strong>SecOps agent</strong> using a manager-worker architecture with <strong>LangChain DeepAgents</strong>, dynamically spawning specialised sub-agents for concurrent security scanning, reducing manual triage time by <strong>~60%</strong>.</li>
+            <li>Designed stateful AI workflows with <strong>LangGraph</strong> and the <strong>A2A protocol</strong> for structured agent-to-agent communication in a distributed multi-agent architecture.</li>
+            <li>Containerised the multi-agent platform with <strong>Docker</strong>, enabling isolated and scalable environments supporting <strong>50+ concurrent agent executions</strong>.</li>
           </ul>
-          <div class="timeline-tags">
+
+          <div class="timeline-tags" aria-label="Technologies">
             <span class="tag">Google ADK</span>
             <span class="tag">DeepAgents</span>
             <span class="tag">LangGraph</span>
@@ -167,69 +218,70 @@
             <span class="tag">A2A</span>
             <span class="tag">Docker</span>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="section" id="projects">
+  <!-- ══════════════════════════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="projects" aria-labelledby="projects-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <span class="section-tag">03. Key Projects</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title" id="projects-title">Featured Projects</h2>
       </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs" id="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="ai-agents">AI &amp; Agents</button>
-        <button class="filter-btn" data-filter="systems">Backend &amp; Distributed Systems</button>
+      <!-- Filter tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Filter projects by category" data-reveal>
+        <button class="filter-btn active" data-filter="all"     role="tab" aria-selected="true">All Projects</button>
+        <button class="filter-btn"        data-filter="ai-agents" role="tab" aria-selected="false">AI &amp; Agents</button>
+        <button class="filter-btn"        data-filter="systems"   role="tab" aria-selected="false">Backend &amp; Systems</button>
       </div>
 
-      <!-- Project Cards Grid -->
-      <div class="projects-grid" id="projects-grid">
+      <div class="projects-grid" id="projects-grid" role="list">
 
-        <!-- Project 1: NetSentinel AI -->
-        <article class="project-card glass-card" data-category="ai-agents">
+        <!-- NetSentinel AI -->
+        <article class="project-card glass-card" data-category="ai-agents" role="listitem" data-reveal>
           <div class="project-header">
-            <div class="project-folder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-blue)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="project-folder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div class="project-links">
-              <a href="https://github.com/madalapranavsai/NetSentinel-AI" target="_blank" rel="noopener" aria-label="GitHub Repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <a href="https://github.com/madalapranavsai/NetSentinel-AI" target="_blank" rel="noopener noreferrer" aria-label="NetSentinel AI on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
               <button class="btn-details" data-modal="modal-netsentinel">Details</button>
             </div>
           </div>
           <h3 class="project-title">NetSentinel AI</h3>
-          <p class="project-desc">Autonomous SRE agent built on Google ADK that assesses infrastructure incidents, routes to Log Analyzer sub-agents (30% MTTD reduction), features prompt-injection firewall and human-in-the-loop approval.</p>
-          <div class="project-tags">
+          <p class="project-desc">Autonomous SRE agent on Google ADK assessing infrastructure incidents and routing to Log Analyzer sub-agents — 30% MTTD reduction, prompt-injection firewall, and human-in-the-loop approval queue.</p>
+          <div class="project-tags" aria-label="Technologies used">
             <span class="tag">Google ADK</span>
             <span class="tag">Gemini API</span>
             <span class="tag">FastAPI</span>
             <span class="tag">FastMCP</span>
-            <span class="tag">Google Cloud Run</span>
+            <span class="tag">Cloud Run</span>
           </div>
         </article>
 
-        <!-- Project 2: Autonomous Security Agent -->
-        <article class="project-card glass-card" data-category="ai-agents">
+        <!-- Autonomous Security Agent -->
+        <article class="project-card glass-card" data-category="ai-agents" role="listitem" data-reveal>
           <div class="project-header">
-            <div class="project-folder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-cyan)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <div class="project-folder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             </div>
             <div class="project-links">
-              <a href="https://github.com/madalapranavsai/security-agent" target="_blank" rel="noopener" aria-label="GitHub Repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <a href="https://github.com/madalapranavsai/security-agent" target="_blank" rel="noopener noreferrer" aria-label="Security Agent on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
               <button class="btn-details" data-modal="modal-secagent">Details</button>
             </div>
           </div>
           <h3 class="project-title">Autonomous Security Agent</h3>
-          <p class="project-desc">Multi-agent security orchestrator dynamically spawning parallel JavaScript workers (20+ tasks parallelized), reducing task execution time by ~40% with sandboxed Hexstrike MCP container integration.</p>
-          <div class="project-tags">
+          <p class="project-desc">Multi-agent security orchestrator dynamically spawning parallel JS workers to run 20+ tasks concurrently — execution time cut ~40% (10 min → 6 min) with sandboxed Hexstrike MCP container integration.</p>
+          <div class="project-tags" aria-label="Technologies used">
             <span class="tag">LangChain DeepAgents</span>
             <span class="tag">Python</span>
             <span class="tag">QuickJS</span>
@@ -238,27 +290,27 @@
           </div>
         </article>
 
-        <!-- Project 3: URL Shortener & Rate Limiter -->
-        <article class="project-card glass-card" data-category="systems">
+        <!-- URL Shortener -->
+        <article class="project-card glass-card" data-category="systems" role="listitem" data-reveal>
           <div class="project-header">
-            <div class="project-folder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent-violet)" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <div class="project-folder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-violet)" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </div>
             <div class="project-links">
-              <a href="https://github.com/madalapranavsai/shortner" target="_blank" rel="noopener" aria-label="GitHub Repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <a href="https://github.com/madalapranavsai/shortner" target="_blank" rel="noopener noreferrer" aria-label="URL Shortener on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
               <button class="btn-details" data-modal="modal-shortener">Details</button>
             </div>
           </div>
           <h3 class="project-title">URL Shortener &amp; Rate Limiter</h3>
-          <p class="project-desc">High-throughput service with custom Snowflake 10,000+ IDs/sec generator, atomic Redis Lua token-bucket rate limiter, Redis write-invalidation caching layer (35% DB load reduction), load-tested with k6 (52.67 req/s @ 99.91% success).</p>
-          <div class="project-tags">
+          <p class="project-desc">High-throughput service with Snowflake ID generator (10,000+ IDs/sec), atomic Redis Lua token-bucket rate limiter, write-invalidation caching (35% DB load reduction) — 52.67 req/s at 99.91% success rate under k6 load.</p>
+          <div class="project-tags" aria-label="Technologies used">
             <span class="tag">FastAPI</span>
             <span class="tag">PostgreSQL</span>
             <span class="tag">Redis Lua</span>
             <span class="tag">Docker</span>
-            <span class="tag">k6 Testing</span>
+            <span class="tag">k6</span>
           </div>
         </article>
 
@@ -266,90 +318,87 @@
     </div>
   </section>
 
-  <!-- Technical Skills Section -->
-  <section class="section" id="skills">
+  <!-- ══════════════════════════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="skills" aria-labelledby="skills-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <span class="section-tag">04. Technical Capabilities</span>
-        <h2 class="section-title">Technical Skills Matrix</h2>
+        <h2 class="section-title" id="skills-title">Technical Skills Matrix</h2>
       </div>
 
       <div class="skills-grid">
-        
-        <!-- Languages -->
-        <div class="skill-category glass-card">
+
+        <div class="skill-category glass-card" data-reveal>
           <div class="category-header">
-            <span class="category-icon">💻</span>
+            <span class="category-icon" aria-hidden="true">💻</span>
             <h3>Languages</h3>
           </div>
           <div class="skill-chips">
-            <div class="skill-chip"><span>Python</span></div>
-            <div class="skill-chip"><span>C++</span></div>
-            <div class="skill-chip"><span>JavaScript</span></div>
-            <div class="skill-chip"><span>C</span></div>
+            <div class="skill-chip">Python</div>
+            <div class="skill-chip">C++</div>
+            <div class="skill-chip">JavaScript</div>
+            <div class="skill-chip">C</div>
           </div>
         </div>
 
-        <!-- AI & Agents -->
-        <div class="skill-category glass-card">
+        <div class="skill-category glass-card" data-reveal>
           <div class="category-header">
-            <span class="category-icon">🤖</span>
+            <span class="category-icon" aria-hidden="true">🤖</span>
             <h3>AI &amp; Agent Frameworks</h3>
           </div>
           <div class="skill-chips">
-            <div class="skill-chip"><span>Google ADK</span></div>
-            <div class="skill-chip"><span>Gemini API</span></div>
-            <div class="skill-chip"><span>LangChain DeepAgents</span></div>
-            <div class="skill-chip"><span>LangGraph</span></div>
-            <div class="skill-chip"><span>MCP (Model Context Protocol)</span></div>
-            <div class="skill-chip"><span>A2A Protocol</span></div>
-            <div class="skill-chip"><span>A2UI Protocol</span></div>
-            <div class="skill-chip"><span>Prompt Engineering</span></div>
+            <div class="skill-chip">Google ADK</div>
+            <div class="skill-chip">Gemini API</div>
+            <div class="skill-chip">LangChain DeepAgents</div>
+            <div class="skill-chip">LangGraph</div>
+            <div class="skill-chip">MCP</div>
+            <div class="skill-chip">A2A Protocol</div>
+            <div class="skill-chip">A2UI Protocol</div>
+            <div class="skill-chip">Prompt Engineering</div>
           </div>
         </div>
 
-        <!-- Backend & Databases -->
-        <div class="skill-category glass-card">
+        <div class="skill-category glass-card" data-reveal>
           <div class="category-header">
-            <span class="category-icon">⚙️</span>
+            <span class="category-icon" aria-hidden="true">⚙️</span>
             <h3>Backend &amp; Databases</h3>
           </div>
           <div class="skill-chips">
-            <div class="skill-chip"><span>FastAPI</span></div>
-            <div class="skill-chip"><span>Flask</span></div>
-            <div class="skill-chip"><span>REST APIs</span></div>
-            <div class="skill-chip"><span>PostgreSQL</span></div>
-            <div class="skill-chip"><span>Redis</span></div>
-            <div class="skill-chip"><span>SQLite</span></div>
+            <div class="skill-chip">FastAPI</div>
+            <div class="skill-chip">Flask</div>
+            <div class="skill-chip">REST APIs</div>
+            <div class="skill-chip">PostgreSQL</div>
+            <div class="skill-chip">Redis</div>
+            <div class="skill-chip">SQLite</div>
           </div>
         </div>
 
-        <!-- Cloud & DevOps -->
-        <div class="skill-category glass-card">
+        <div class="skill-category glass-card" data-reveal>
           <div class="category-header">
-            <span class="category-icon">☁️</span>
+            <span class="category-icon" aria-hidden="true">☁️</span>
             <h3>Cloud &amp; DevOps</h3>
           </div>
           <div class="skill-chips">
-            <div class="skill-chip"><span>Docker</span></div>
-            <div class="skill-chip"><span>Google Cloud Run</span></div>
-            <div class="skill-chip"><span>GitHub Actions CI/CD</span></div>
-            <div class="skill-chip"><span>Git</span></div>
-            <div class="skill-chip"><span>Linux Administration</span></div>
+            <div class="skill-chip">Docker</div>
+            <div class="skill-chip">Google Cloud Run</div>
+            <div class="skill-chip">GitHub Actions CI/CD</div>
+            <div class="skill-chip">Git</div>
+            <div class="skill-chip">Linux</div>
           </div>
         </div>
 
-        <!-- CS Fundamentals -->
-        <div class="skill-category glass-card">
+        <div class="skill-category glass-card" data-reveal>
           <div class="category-header">
-            <span class="category-icon">🧠</span>
+            <span class="category-icon" aria-hidden="true">🧠</span>
             <h3>CS Fundamentals</h3>
           </div>
           <div class="skill-chips">
-            <div class="skill-chip"><span>Data Structures &amp; Algorithms</span></div>
-            <div class="skill-chip"><span>Object-Oriented Programming (OOP)</span></div>
-            <div class="skill-chip"><span>System Architecture</span></div>
-            <div class="skill-chip"><span>Competitive Programming</span></div>
+            <div class="skill-chip">Data Structures &amp; Algorithms</div>
+            <div class="skill-chip">OOP</div>
+            <div class="skill-chip">System Architecture</div>
+            <div class="skill-chip">Competitive Programming</div>
           </div>
         </div>
 
@@ -357,52 +406,58 @@
     </div>
   </section>
 
-  <!-- Achievements Section -->
-  <section class="section" id="achievements">
+  <!-- ══════════════════════════════════════════════════════════════
+       ACHIEVEMENTS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="achievements" aria-labelledby="achievements-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <span class="section-tag">05. Competitive Highlights</span>
-        <h2 class="section-title">Achievements &amp; Honors</h2>
+        <h2 class="section-title" id="achievements-title">Achievements &amp; Honors</h2>
       </div>
 
       <div class="achievements-grid">
-        <div class="achievement-card glass-card">
-          <div class="achievement-icon">🏆</div>
+
+        <div class="achievement-card glass-card" data-reveal>
+          <div class="achievement-icon" aria-hidden="true">🏆</div>
           <div class="achievement-content">
             <h3>Top-10 Finalist — Swafinix AI Agents Hackathon 2025</h3>
             <p>Led team as <strong>Team Leader</strong> competing against <strong>200+ teams</strong> in designing high-performing autonomous AI agents.</p>
           </div>
         </div>
 
-        <div class="achievement-card glass-card">
-          <div class="achievement-icon">⚡</div>
+        <div class="achievement-card glass-card" data-reveal>
+          <div class="achievement-icon" aria-hidden="true">⚡</div>
           <div class="achievement-content">
             <h3>Codeforces Pupil &amp; CodeChef 3★</h3>
-            <p>Codeforces Pupil (Max Rating: <strong>1234</strong>) | CodeChef 3★ Programmer (Max Rating: <strong>1600+</strong>).</p>
+            <p>Codeforces Pupil (Max Rating: <strong>1234</strong>) · CodeChef 3★ (Max Rating: <strong>1600+</strong>).</p>
           </div>
         </div>
 
-        <div class="achievement-card glass-card">
-          <div class="achievement-icon">💡</div>
+        <div class="achievement-card glass-card" data-reveal>
+          <div class="achievement-icon" aria-hidden="true">💡</div>
           <div class="achievement-content">
             <h3>200+ Algorithmic Problems Solved</h3>
-            <p>Demonstrated strong analytical problem-solving skills across Codeforces, LeetCode, and CodeChef platform challenges.</p>
+            <p>Strong analytical problem-solving across Codeforces, LeetCode, and CodeChef.</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Interactive Terminal Section -->
-  <section class="section" id="terminal">
+  <!-- ══════════════════════════════════════════════════════════════
+       TERMINAL
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="terminal" aria-labelledby="terminal-title">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <span class="section-tag">06. Interactive CLI Shell</span>
-        <h2 class="section-title">Developer Terminal</h2>
+        <h2 class="section-title" id="terminal-title">Developer Terminal</h2>
       </div>
 
-      <div class="terminal-card glass-card">
-        <div class="terminal-header">
+      <div class="terminal-card glass-card" data-reveal>
+        <div class="terminal-header" aria-hidden="true">
           <div class="terminal-dots">
             <span class="dot dot-red"></span>
             <span class="dot dot-yellow"></span>
@@ -410,179 +465,190 @@
           </div>
           <div class="terminal-title">pranav@manit-bhopal:~ (bash)</div>
         </div>
-        <div class="terminal-body" id="terminal-output">
-          <div class="terminal-line">Welcome to Madala Pranav Sai's portfolio shell v2.0.0</div>
-          <div class="terminal-line">Type <span class="cmd-highlight">help</span> to explore experience, projects, skills, education, or contact info.</div>
+
+        <div class="terminal-body" id="terminal-output" role="log" aria-live="polite" aria-label="Terminal output">
+          <div class="terminal-line">Welcome to Madala Pranav Sai's portfolio shell v3.0.0</div>
+          <div class="terminal-line">Type <span class="cmd-kw">help</span> to explore. Use <span class="cmd-kw">↑ ↓</span> for history, <span class="cmd-kw">Tab</span> to autocomplete.</div>
         </div>
-        <form class="terminal-input-row" id="terminal-form">
-          <span class="prompt-user">pranav@manit:~ $</span>
-          <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="type help, experience, projects, skills, education..." aria-label="Terminal command input">
+
+        <form class="terminal-input-row" id="terminal-form" aria-label="Terminal input">
+          <span class="prompt-user" aria-hidden="true">pranav@manit:~&nbsp;$</span>
+          <label for="terminal-input" class="sr-only">Enter terminal command</label>
+          <input type="text" id="terminal-input" class="terminal-input"
+                 autocomplete="off" spellcheck="false"
+                 placeholder="type help, projects, skills…"
+                 aria-label="Terminal command input">
           <button type="submit" class="sr-only">Run</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="section" id="contact">
+  <!-- ══════════════════════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="section" id="contact" aria-labelledby="contact-title">
     <div class="container">
-      <div class="section-header center">
+      <div class="section-header center" data-reveal>
         <span class="section-tag">07. Direct Contact</span>
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Interested in collaborating on AI agents, backend engineering, or full-time opportunities? Send me an email or connect!</p>
+        <h2 class="section-title" id="contact-title">Get In Touch</h2>
+        <p class="section-subtitle">Interested in collaborating on AI agents, backend engineering, or full-time opportunities? Send me a message!</p>
       </div>
 
       <div class="contact-wrapper">
-        <div class="contact-info glass-card">
+
+        <div class="contact-info glass-card" data-reveal>
           <h3>Contact Details</h3>
           <p>Feel free to reach out for software engineering roles, hackathons, or AI agent system builds.</p>
 
           <div class="contact-details">
             <div class="contact-item">
-              <span class="contact-icon">📧</span>
+              <span class="contact-icon" aria-hidden="true">📧</span>
               <div>
                 <span class="contact-label">Email</span>
                 <a href="mailto:madalapranavsai@gmail.com" class="contact-value">madalapranavsai@gmail.com</a>
               </div>
             </div>
-
             <div class="contact-item">
-              <span class="contact-icon">📞</span>
+              <span class="contact-icon" aria-hidden="true">📞</span>
               <div>
                 <span class="contact-label">Phone</span>
-                <span class="contact-value">+91 7386781195</span>
+                <a href="tel:+917386781195" class="contact-value">+91 7386781195</a>
               </div>
             </div>
-
             <div class="contact-item">
-              <span class="contact-icon">🐙</span>
+              <span class="contact-icon" aria-hidden="true">🐙</span>
               <div>
                 <span class="contact-label">GitHub</span>
-                <a href="https://github.com/madalapranavsai" target="_blank" rel="noopener" class="contact-value">github.com/madalapranavsai</a>
+                <a href="https://github.com/madalapranavsai" target="_blank" rel="noopener noreferrer" class="contact-value">github.com/madalapranavsai</a>
               </div>
             </div>
-
             <div class="contact-item">
-              <span class="contact-icon">💼</span>
+              <span class="contact-icon" aria-hidden="true">💼</span>
               <div>
                 <span class="contact-label">LinkedIn</span>
-                <a href="https://linkedin.com/in/pranav-sai-madala" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/pranav-sai-madala</a>
+                <a href="https://linkedin.com/in/pranav-sai-madala" target="_blank" rel="noopener noreferrer" class="contact-value">linkedin.com/in/pranav-sai-madala</a>
               </div>
             </div>
           </div>
 
-          <div class="quick-copy">
-            <button class="btn btn-secondary width-full" id="btn-copy-email">
-              <span>Copy Email Address</span>
-            </button>
-          </div>
+          <button class="btn btn-secondary width-full" id="btn-copy-email" aria-label="Copy email address to clipboard">
+            Copy Email Address
+          </button>
         </div>
 
-        <form class="contact-form glass-card" id="contact-form">
+        <form class="contact-form glass-card" id="contact-form" novalidate data-reveal aria-label="Contact form">
           <div class="form-group">
             <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required placeholder="Recruiter / Collaborator Name">
+            <input type="text" id="name" name="name" required
+                   placeholder="Recruiter / Collaborator Name"
+                   autocomplete="name">
           </div>
           <div class="form-group">
             <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required placeholder="email@company.com">
+            <input type="email" id="email" name="email" required
+                   placeholder="email@company.com"
+                   autocomplete="email">
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Hi Pranav, I saw your work at AxiomIO and Google ADK projects..."></textarea>
+            <textarea id="message" name="message" rows="5" required
+                      placeholder="Hi Pranav, I saw your work at AxiomIO…"></textarea>
           </div>
           <button type="submit" class="btn btn-primary width-full">
             <span>Send Message</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
         </form>
+
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- ══════════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
     <div class="container footer-container">
-      <div class="footer-text">
-        <p>&copy; <span id="current-year">2026</span> Madala Pranav Sai. Engineered with Vanilla HTML, CSS, and JS (UI/UX Pro Max).</p>
-      </div>
-      <div class="footer-links">
-        <a href="#hero">Back to top ↑</a>
-      </div>
+      <p>&copy; <span id="current-year">2026</span> Madala Pranav Sai. Engineered with Vanilla HTML, CSS &amp; JS.</p>
+      <a href="#hero" aria-label="Back to top">Back to top ↑</a>
     </div>
   </footer>
 
-  <!-- Modals for Detailed Case Studies -->
-  <!-- Modal 1: NetSentinel AI -->
-  <dialog class="modal glass-modal" id="modal-netsentinel">
+  <!-- ══════════════════════════════════════════════════════════════
+       MODALS
+  ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- NetSentinel AI -->
+  <dialog class="modal glass-modal" id="modal-netsentinel" aria-labelledby="modal-netsentinel-title">
     <div class="modal-content">
-      <button class="modal-close" data-close-modal>&times;</button>
+      <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
       <div class="modal-header">
         <span class="modal-tag">Google ADK &bull; Gemini API &bull; FastAPI &bull; Docker</span>
-        <h2>NetSentinel AI</h2>
+        <h2 id="modal-netsentinel-title">NetSentinel AI</h2>
       </div>
       <div class="modal-body">
-        <p><strong>NetSentinel AI</strong> is an autonomous SRE incident resolution agent built on <strong>Google ADK</strong> that assesses infrastructure incidents and routes them to specialized Log Analyzer sub-agents, reducing mean time-to-diagnose (MTTD) by 30%.</p>
-        <h4>Key Technical Accomplishments:</h4>
+        <p><strong>NetSentinel AI</strong> is an autonomous SRE incident resolution agent on <strong>Google ADK</strong> that assesses infrastructure incidents and routes them to specialised Log Analyzer sub-agents, reducing mean time-to-diagnose (MTTD) by 30%.</p>
+        <h4>Key Technical Accomplishments</h4>
         <ul>
-          <li><strong>Human-in-the-Loop Workflow:</strong> Features a SQLite-backed queue and REST endpoints enabling operators to review &amp; resolve 100+ system alerts daily.</li>
-          <li><strong>Prompt-Injection Firewall &amp; Memory:</strong> Persistent JSON-backed incident memory allowing agent to reuse past resolutions, cutting repeat incident response times by 45%.</li>
-          <li><strong>CI/CD &amp; Deployment:</strong> Unit/integration test suite with 85% code coverage, GitHub Actions CI pipeline, and secure Google Cloud Run deployment.</li>
+          <li><strong>Human-in-the-Loop Workflow:</strong> SQLite-backed approval queue and REST endpoints enabling operators to review and resolve 100+ system alerts daily.</li>
+          <li><strong>Prompt-Injection Firewall &amp; Memory:</strong> Persistent JSON-backed incident memory — past resolutions reused, cutting repeat incident response times by 45%.</li>
+          <li><strong>CI/CD &amp; Deployment:</strong> 85% code-coverage test suite, GitHub Actions pipeline, and secure Google Cloud Run deployment.</li>
         </ul>
       </div>
       <div class="modal-footer">
-        <a href="https://github.com/madalapranavsai/NetSentinel-AI" target="_blank" rel="noopener" class="btn btn-primary">View GitHub Repository</a>
+        <a href="https://github.com/madalapranavsai/NetSentinel-AI" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Repository</a>
       </div>
     </div>
   </dialog>
 
-  <!-- Modal 2: Autonomous Security Agent -->
-  <dialog class="modal glass-modal" id="modal-secagent">
+  <!-- Autonomous Security Agent -->
+  <dialog class="modal glass-modal" id="modal-secagent" aria-labelledby="modal-secagent-title">
     <div class="modal-content">
-      <button class="modal-close" data-close-modal>&times;</button>
+      <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
       <div class="modal-header">
         <span class="modal-tag">LangChain DeepAgents &bull; QuickJS &bull; MCP &bull; Docker</span>
-        <h2>Autonomous Security Agent</h2>
+        <h2 id="modal-secagent-title">Autonomous Security Agent</h2>
       </div>
       <div class="modal-body">
-        <p>Dynamic multi-agent security orchestrator where a supervisor agent generates JavaScript workflows at runtime to parallelize 20+ delegated security tasks simultaneously.</p>
-        <h4>Key Technical Accomplishments:</h4>
+        <p>Dynamic multi-agent security orchestrator where a supervisor agent generates JavaScript workflows at runtime to parallelise 20+ delegated security tasks simultaneously.</p>
+        <h4>Key Technical Accomplishments</h4>
         <ul>
-          <li><strong>Parallel Worker Execution:</strong> Reduced task execution time by ~40% (10 min &rarr; 6 min) by replacing sequential sub-agent execution with dynamically spawned parallel workers.</li>
-          <li><strong>Sandboxed Tooling Access:</strong> Integrated Hexstrike MCP running in an isolated Docker container, providing sandboxed, on-demand security tooling access to 10+ parallel worker sub-agents.</li>
+          <li><strong>Parallel Worker Execution:</strong> Reduced task execution time by ~40% (10 min → 6 min) by replacing sequential sub-agent execution with dynamically spawned parallel workers.</li>
+          <li><strong>Sandboxed Tooling Access:</strong> Hexstrike MCP running in an isolated Docker container, providing sandboxed on-demand security tooling to 10+ parallel worker sub-agents.</li>
         </ul>
       </div>
       <div class="modal-footer">
-        <a href="https://github.com/madalapranavsai/security-agent" target="_blank" rel="noopener" class="btn btn-primary">View GitHub Repository</a>
+        <a href="https://github.com/madalapranavsai/security-agent" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Repository</a>
       </div>
     </div>
   </dialog>
 
-  <!-- Modal 3: URL Shortener & Rate Limiter -->
-  <dialog class="modal glass-modal" id="modal-shortener">
+  <!-- URL Shortener & Rate Limiter -->
+  <dialog class="modal glass-modal" id="modal-shortener" aria-labelledby="modal-shortener-title">
     <div class="modal-content">
-      <button class="modal-close" data-close-modal>&times;</button>
+      <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
       <div class="modal-header">
         <span class="modal-tag">FastAPI &bull; PostgreSQL &bull; Redis Lua &bull; k6</span>
-        <h2>URL Shortener &amp; Rate Limiter</h2>
+        <h2 id="modal-shortener-title">URL Shortener &amp; Rate Limiter</h2>
       </div>
       <div class="modal-body">
-        <p>A high-performance URL shortening and rate-limiting service built to handle high concurrency with zero collision risks.</p>
-        <h4>Key Technical Accomplishments:</h4>
+        <p>High-performance URL shortening and rate-limiting service built to handle high concurrency with zero collision risk.</p>
+        <h4>Key Technical Accomplishments</h4>
         <ul>
-          <li><strong>Snowflake ID Generator:</strong> Thread-safe, clock-drift resilient generator capable of producing 10,000+ unique IDs/sec without shared DB counters.</li>
-          <li><strong>Redis Token-Bucket Limiter:</strong> Enforces 100 requests/min limit using atomic Redis Lua scripts to eliminate race conditions.</li>
-          <li><strong>Performance &amp; Load Testing:</strong> Redis caching with write invalidation reduced DB load by 35%. Load-tested with k6 at 50 concurrent users, sustaining 52.67 req/s at 99.91% success rate (p50: 6.96ms).</li>
+          <li><strong>Snowflake ID Generator:</strong> Thread-safe, clock-drift resilient generator producing 10,000+ unique IDs/sec without shared DB counters.</li>
+          <li><strong>Redis Token-Bucket Limiter:</strong> Enforces 100 req/min limit using atomic Redis Lua scripts to eliminate race conditions.</li>
+          <li><strong>Load Testing:</strong> Redis write-invalidation caching reduced DB load by 35%. k6 load test: 50 concurrent users, 52.67 req/s, 99.91% success (p50: 6.96 ms).</li>
         </ul>
       </div>
       <div class="modal-footer">
-        <a href="https://github.com/madalapranavsai/shortner" target="_blank" rel="noopener" class="btn btn-primary">View GitHub Repository</a>
+        <a href="https://github.com/madalapranavsai/shortner" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Repository</a>
       </div>
     </div>
   </dialog>
 
-  <!-- Toast Container -->
-  <div class="toast-container" id="toast-container"></div>
+  <!-- Toast container (created by JS if needed, but present for no-JS fallback) -->
+  <div id="toast-container" aria-live="polite" aria-atomic="false"></div>
 
   <script src="app.js"></script>
 </body>
