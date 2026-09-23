@@ -6,7 +6,7 @@
 
   <!-- ── SEO ── -->
   <title>Madala Pranav Sai | AI Agents & Software Engineer</title>
-  <meta name="description" content="Portfolio of Madala Pranav Sai — Software Engineer Intern at AxiomIO, Google ADK & LangChain AI Agent Specialist, B.Tech ECE at MANIT Bhopal.">
+  <meta name="description" content="Portfolio of Madala Pranav Sai — Software Engineer Intern at AxiomIO, Google ADK & LangChain AI Agent Specialist, B.Tech ECE at MANIT Bhopal. Builder of DocuMind (Corrective RAG), NetSentinel AI, and opencode-gen-ui.">
   <meta name="author" content="Madala Pranav Sai">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://madalapranavsai.github.io/portfolio/">
@@ -99,8 +99,9 @@
         <h2 class="hero-subtitle">AI Agents &amp; Software Engineer Specialist</h2>
         <p class="hero-description">
           Engineered multi-agent SecOps platforms on Google ADK, Gemini API, and
-          LangChain DeepAgents. Crafting high-throughput FastAPI backends,
-          Docker microservices, and distributed AI agent architectures.
+          LangChain DeepAgents. Building production RAG systems, high-throughput
+          FastAPI backends, Docker microservices, and distributed AI agent
+          architectures.
         </p>
 
         <div class="hero-actions">
@@ -238,9 +239,34 @@
         <button class="filter-btn active" data-filter="all"     role="tab" aria-selected="true">All Projects</button>
         <button class="filter-btn"        data-filter="ai-agents" role="tab" aria-selected="false">AI &amp; Agents</button>
         <button class="filter-btn"        data-filter="systems"   role="tab" aria-selected="false">Backend &amp; Systems</button>
+        <button class="filter-btn"        data-filter="ml"        role="tab" aria-selected="false">Machine Learning</button>
       </div>
 
       <div class="projects-grid" id="projects-grid" role="list">
+
+        <!-- DocuMind -->
+        <article class="project-card glass-card" data-category="ai-agents" role="listitem" data-reveal>
+          <div class="project-header">
+            <div class="project-folder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/madalapranavsai/RAG1" target="_blank" rel="noopener noreferrer" aria-label="DocuMind on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <button class="btn-details" data-modal="modal-documind">Details</button>
+            </div>
+          </div>
+          <h3 class="project-title">DocuMind</h3>
+          <p class="project-desc">Multi-tenant Corrective RAG (CRAG) SaaS platform — a self-correcting retrieval pipeline that rewrites ambiguous queries, retrieves via hybrid pgvector search, and grades relevance before generating cited answers. 86.7% benchmarked answer quality at ~3.7s latency.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">LangGraph</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">pgvector</span>
+            <span class="tag">React 19</span>
+          </div>
+        </article>
 
         <!-- NetSentinel AI -->
         <article class="project-card glass-card" data-category="ai-agents" role="listitem" data-reveal>
@@ -314,6 +340,53 @@
           </div>
         </article>
 
+        <!-- opencode-gen-ui -->
+        <article class="project-card glass-card" data-category="systems" role="listitem" data-reveal>
+          <div class="project-header">
+            <div class="project-folder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-violet)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://www.npmjs.com/package/opencode-gen-ui" target="_blank" rel="noopener noreferrer" aria-label="opencode-gen-ui on npm">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M1.5 3v18h9v-15h4.5v15h7.5v-18h-21z"/></svg>
+              </a>
+              <button class="btn-details" data-modal="modal-genui">Details</button>
+            </div>
+          </div>
+          <h3 class="project-title">opencode-gen-ui</h3>
+          <p class="project-desc">Open-source generative UI toolkit letting AI agents render structured, interactive UI — charts, tables, maps, dialogs, 3D visualizations — directly from natural language or structured agent output. Published on npm, MIT licensed.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">TypeScript</span>
+            <span class="tag">D3</span>
+            <span class="tag">Three.js</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Mermaid</span>
+          </div>
+        </article>
+
+        <!-- Fake News Detection -->
+        <article class="project-card glass-card" data-category="ml" role="listitem" data-reveal>
+          <div class="project-header">
+            <div class="project-folder" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/madalapranavsai/fake_news_detection" target="_blank" rel="noopener noreferrer" aria-label="Fake News Detection on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <button class="btn-details" data-modal="modal-fakenews">Details</button>
+            </div>
+          </div>
+          <h3 class="project-title">Fake News Detection</h3>
+          <p class="project-desc">Bidirectional LSTM binary classifier distinguishing real vs. fake news across a 72K-article dataset — 95.4% test accuracy, validated with held-out test sets and confusion-matrix analysis.</p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Keras</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">NLP</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -339,6 +412,7 @@
             <div class="skill-chip">Python</div>
             <div class="skill-chip">C++</div>
             <div class="skill-chip">JavaScript</div>
+            <div class="skill-chip">TypeScript</div>
             <div class="skill-chip">C</div>
           </div>
         </div>
@@ -356,6 +430,7 @@
             <div class="skill-chip">MCP</div>
             <div class="skill-chip">A2A Protocol</div>
             <div class="skill-chip">A2UI Protocol</div>
+            <div class="skill-chip">RAG / pgvector</div>
             <div class="skill-chip">Prompt Engineering</div>
           </div>
         </div>
@@ -372,6 +447,21 @@
             <div class="skill-chip">PostgreSQL</div>
             <div class="skill-chip">Redis</div>
             <div class="skill-chip">SQLite</div>
+            <div class="skill-chip">Supabase</div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card" data-reveal>
+          <div class="category-header">
+            <span class="category-icon" aria-hidden="true">🎨</span>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-chips">
+            <div class="skill-chip">React</div>
+            <div class="skill-chip">D3.js</div>
+            <div class="skill-chip">Three.js</div>
+            <div class="skill-chip">Plotly</div>
+            <div class="skill-chip">Mermaid</div>
           </div>
         </div>
 
@@ -383,6 +473,8 @@
           <div class="skill-chips">
             <div class="skill-chip">Docker</div>
             <div class="skill-chip">Google Cloud Run</div>
+            <div class="skill-chip">Render</div>
+            <div class="skill-chip">Railway</div>
             <div class="skill-chip">GitHub Actions CI/CD</div>
             <div class="skill-chip">Git</div>
             <div class="skill-chip">Linux</div>
@@ -392,12 +484,13 @@
         <div class="skill-category glass-card" data-reveal>
           <div class="category-header">
             <span class="category-icon" aria-hidden="true">🧠</span>
-            <h3>CS Fundamentals</h3>
+            <h3>CS Fundamentals &amp; ML</h3>
           </div>
           <div class="skill-chips">
             <div class="skill-chip">Data Structures &amp; Algorithms</div>
             <div class="skill-chip">OOP</div>
             <div class="skill-chip">System Architecture</div>
+            <div class="skill-chip">TensorFlow / Keras</div>
             <div class="skill-chip">Competitive Programming</div>
           </div>
         </div>
@@ -579,6 +672,32 @@
        MODALS
   ═══════════════════════════════════════════════════════════════ -->
 
+  <!-- DocuMind -->
+  <dialog class="modal glass-modal" id="modal-documind" aria-labelledby="modal-documind-title">
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">LangGraph &bull; Gemini API &bull; FastAPI &bull; pgvector &bull; React 19</span>
+        <h2 id="modal-documind-title">DocuMind</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>DocuMind</strong> is a multi-tenant SaaS platform implementing <strong>Corrective RAG (CRAG)</strong> — a self-correcting retrieval pipeline that rewrites ambiguous queries, retrieves candidate chunks, grades their relevance, and retries retrieval if the grade fails, before generating a grounded answer with citations.</p>
+        <h4>Key Technical Accomplishments</h4>
+        <ul>
+          <li><strong>CRAG State Machine:</strong> LangGraph-orchestrated pipeline — query rewrite → hybrid pgvector retrieval → relevance grading → conditional retry/transform → generation.</li>
+          <li><strong>Multi-Tenant Security:</strong> Workspace-scoped Row-Level Security policies, auth triggers, and isolated storage buckets on Supabase Postgres.</li>
+          <li><strong>10-Format Ingestion:</strong> PDF, DOCX, XLSX, PPTX, CSV, JSON, HTML, TXT, and MD, with local ONNX-based embeddings — no external embedding API calls required.</li>
+          <li><strong>Evaluation Harness:</strong> Custom eval suite scoring the RAG Triad (faithfulness, answer relevance, context relevance) plus fact recall and CRAG decision accuracy — 86.7% composite quality, ~3.7s end-to-end latency.</li>
+          <li><strong>Custom A2UI Renderer:</strong> React 19 frontend with widgets for charts, tables, citation cards, metric cards, and Mermaid diagrams, plus a retrieval sandbox for inspecting chunk-level cosine similarity.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/madalapranavsai/RAG1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Repository</a>
+        <a href="https://documind-rt2a.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Live Demo</a>
+      </div>
+    </div>
+  </dialog>
+
   <!-- NetSentinel AI -->
   <dialog class="modal glass-modal" id="modal-netsentinel" aria-labelledby="modal-netsentinel-title">
     <div class="modal-content">
@@ -643,6 +762,52 @@
       </div>
       <div class="modal-footer">
         <a href="https://github.com/madalapranavsai/shortner" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Repository</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- opencode-gen-ui -->
+  <dialog class="modal glass-modal" id="modal-genui" aria-labelledby="modal-genui-title">
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">TypeScript &bull; D3 &bull; Three.js &bull; Plotly &bull; Mermaid &bull; AG Grid</span>
+        <h2 id="modal-genui-title">opencode-gen-ui</h2>
+      </div>
+      <div class="modal-body">
+        <p><strong>opencode-gen-ui</strong> is an open-source generative UI toolkit that lets AI agents render structured, interactive UI — charts, tables, maps, dialogs, and 3D visualizations — directly from natural language or structured agent output.</p>
+        <h4>Key Technical Accomplishments</h4>
+        <ul>
+          <li><strong>Modular Pipeline:</strong> Schema → registry → renderer → action-bus architecture built for framework-agnostic consumption by AI agent runtimes.</li>
+          <li><strong>Reliability Hardening:</strong> Added boundary validation and retry logic that re-prompts the generating model with specific feedback on malformed schemas, rather than failing outright.</li>
+          <li><strong>Published Package:</strong> v1.0.1, MIT licensed, semantically versioned, live on the public npm registry.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.npmjs.com/package/opencode-gen-ui" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on npm</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Fake News Detection -->
+  <dialog class="modal glass-modal" id="modal-fakenews" aria-labelledby="modal-fakenews-title">
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag">TensorFlow &bull; Keras &bull; Scikit-learn &bull; NLP</span>
+        <h2 id="modal-fakenews-title">Fake News Detection</h2>
+      </div>
+      <div class="modal-body">
+        <p>A binary text classifier distinguishing real vs. fake news articles, built with a <strong>Bidirectional LSTM</strong> in TensorFlow/Keras.</p>
+        <h4>Key Technical Accomplishments</h4>
+        <ul>
+          <li><strong>Full ML Pipeline:</strong> Preprocessing, tokenization, and training across a 72K-article dataset.</li>
+          <li><strong>Rigorous Evaluation:</strong> Early stopping, held-out test sets, and confusion-matrix / precision-recall analysis to validate generalization rather than relying on a single accuracy number.</li>
+          <li><strong>Result:</strong> 95.4% test accuracy.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="https://github.com/madalapranavsai/fake_news_detection" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View GitHub Repository</a>
       </div>
     </div>
   </dialog>
